@@ -25,7 +25,7 @@ Order of operations
 Example of use
 --------------
 ````
-> kkpof "Stellar.org Bitcoin Giveaway Round 2: GCE6KHQL4PXCOUFV27JQ2OXMP2LY4RB3E63RUT7DOENR7YUJ3ALFYX7W"
+kkpof "Stellar.org Bitcoin Giveaway Round 2: GCE6KHQL4PXCOUFV27JQ2OXMP2LY4RB3E63RUT7DOENR7YUJ3ALFYX7W"
 ````
 
 Your KeepKey will ask you to confirm the message once for each address
@@ -89,7 +89,10 @@ Installation (Windows)
 
 Installation (Mac)
 ------------------
-
+* Install Python 2.7 (https://www.python.org/downloads/)
+* Run the installer that you download
+* Open the terminal
+* pip install kkpof
 
 Installation (Debian-Ubuntu)
 ----------------------------
