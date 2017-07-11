@@ -1,5 +1,6 @@
 kkpof - KeepKey Proof of funds
 ==============================
+
 A simple utility that provides a proof of funds for the bitcoins secured
 by a KeepKey. It simple utility that finds all bitcoin addresses on a
 KeepKey that have an unspent balance and signs a message with the key
@@ -8,19 +9,20 @@ associated with each of those addresses.
 This utility relies on the dataservices supplied by BlockCypher, so
 your accounts need to be set up in the KeepKey Chrome Wallet.
 
+
 Order of operations
 -------------------
-1. Find the KeepKey attached to the system
-1. Get the data needed to compute the API token from the KeepKey
-2. Query the wallet list from BlockCypher
-3. For each wallet, query the wallet metadata
-4. Decrypt the encrypted-node-path for each wallet
-5. Quert the UTXOs from BlockCypher
-6. For each unique address with a UTXO, lookup up the path of the
-   address relative to the root of the wallet
-7. Request a signature of the message for each address node path with a
-   UTXO. User confirmation on the KeepKey is required.
-8. Output the address and the signature
+
+#. Find the KeepKey attached to the system
+#. Get the data needed to compute the API token from the KeepKey
+#. Query the wallet list from BlockCypher
+#. For each wallet, query the wallet metadata
+#. Decrypt the encrypted-node-path for each wallet
+#. Quert the UTXOs from BlockCypher
+#. For each unique address with a UTXO, lookup up the path of the address relative to the root of the wallet
+#. Request a signature of the message for each address node path with a UTXO. User confirmation on the KeepKey is required.
+#. Output the address and the signature
+
 
 Example of use
 --------------
@@ -47,6 +49,7 @@ If need a list of addresses before you are given the message to be signed (when 
 you can run kkpof without specifying a message. It will display a list of addresses only::
 
     kkpof
+
     1Ca3HHUpfwkhyM2BFVQTaETaoobDQB5KpK
     19R25QpxKJs26PGYTrapurg5u2DadRCMw
     15TxGsqDjhh5SYMb1K25xQbu6h3vFncgQE
@@ -79,24 +82,29 @@ For example: If your PIN is **1234** and KeepKey displays the following:
 
 You will type: **3795**
 
+
 Installation (Windows)
 ----------------------
-* Install Python 2.7 (https://www.python.org/downloads/)
-* Run C:\\python27\\scripts\\pip.exe install cython
-* Install Microsoft Visual C++ Compiler for Python 2.7
-* Clone this repository (using TortoiseGit) to local directory
-* Run C:\\python27\\python.exe setup.py install (or develop)
+
+#. Install Python 2.7 (https://www.python.org/downloads/)
+#. Run C:\\python27\\scripts\\pip.exe install cython
+#. Install Microsoft Visual C++ Compiler for Python 2.7
+#. Clone this repository (using TortoiseGit) to local directory
+#. Run C:\\python27\\python.exe setup.py install (or develop)
+
 
 Installation (Mac)
 ------------------
-* Install Python 2.7 (https://www.python.org/downloads/)
-* Run the installer that you download
-* Open the terminal
-* pip install kkpof
+
+#. Install Python 2.7 (https://www.python.org/downloads/)
+#. Run the installer that you download
+#. Open the terminal
+#. pip install kkpof
+
 
 Installation (Debian-Ubuntu)
 ----------------------------
-* sudo apt-get install python-dev python-setuptools cython libusb-1.0-0-dev libudev-dev git
-* git clone https://github.com/keepkey/python-keepkey.git
-* cd python-keepkey
-* python setup.py install (or develop)
+#. sudo apt-get install python-dev python-setuptools cython libusb-1.0-0-dev libudev-dev git
+#. git clone https://github.com/keepkey/python-keepkey.git
+#. cd python-keepkey
+#. python setup.py install (or develop)
