@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='kkpof',
-    version='0.0.1',
+    version='0.0.2',
     author='Kenneth Heutmaker (bgok)',
     author_email='ken@keepkey.com',
     description='A simple utility that provides a proof of funds for the bitcoins secured by a KeepKey. It finds all /'

@@ -31,7 +31,10 @@ def decryptNodePath(client, encryptedNodePath):
                                            ask_on_decrypt=False, ask_on_encrypt=False)
 
 def main():
-    message = sys.argv[1]
+    if len(sys.argv) > 1:
+        message = sys.argv[1]
+    else:
+        message = None
 
     devices = HidTransport.enumerate()
     if len(devices) == 0:
@@ -86,10 +89,13 @@ def main():
             ]
 
             for addr in addressesWithBalance:
-                nodePath = path + '/' + [a['path'] for a in walletAddrs if addr == a['address']][0][2:]
-                msg = client.sign_message('Bitcoin', client.expand_path(nodePath), message)
-                assert(msg.address == addr)
-                print(msg.address, base64.b64encode(msg.signature))
+                if message != None:
+                    nodePath = path + '/' + [a['path'] for a in walletAddrs if addr == a['address']][0][2:]
+                    msg = client.sign_message('Bitcoin', client.expand_path(nodePath), message)
+                    assert(msg.address == addr)
+                    print(msg.address, base64.b64encode(msg.signature))
+                else:
+                    print(addr)
 
     client.close()
 

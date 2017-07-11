@@ -24,29 +24,33 @@ Order of operations
 
 Example of use
 --------------
-````
-kkpof "Stellar.org Bitcoin Giveaway Round 2: GCE6KHQL4PXCOUFV27JQ2OXMP2LY4RB3E63RUT7DOENR7YUJ3ALFYX7W"
-````
+::
+
+    kkpof "Stellar.org Bitcoin Giveaway Round 2: GCE6KHQL4PXCOUFV27JQ2OXMP2LY4RB3E63RUT7DOENR7YUJ3ALFYX7W"
 
 Your KeepKey will ask you to confirm the message once for each address
-that has a UTXO. The screen will be similar to this:
+that has a UTXO. The screen will be similar to this::
 
-````
-SIGN MESSAGE
-Stellar.org Bitcoin Giveaway Round 2:
-GCE6KHQL4PXCOUFV27JQ2OXMP2LY4RB3E63RU
-T7DOENR7YUJ3ALFYX7W
-````
+    SIGN MESSAGE
+    Stellar.org Bitcoin Giveaway Round 2:
+    GCE6KHQL4PXCOUFV27JQ2OXMP2LY4RB3E63RU
+    T7DOENR7YUJ3ALFYX7W
 
 When this is confirmed on the device for each address, a list of
-addresses and corresponding signatures will be output in the console:
+addresses and corresponding signatures will be output in the console::
 
-Output
-````
-1Ca3HHUpfwkhyM2BFVQTaETaoobDQB5KpK IBNyA+WjHqEOWiG+B7+iU1mrKF4HGxZQGnwv0kAkWThIbxOvHOX98w74oHpuF4pM/8ncy4a3tWBDVCk8E2GggyU=
-19R25QpxKJs26PGYTrapurg5u2DadRCMw HyjukdO0xGPaiPL0YcQe6coDDy+SpOzCHkjoMd1JhlETRiipWU7VbjDBChb1jqKwXANjMV3rlIRmEEtzG87w/8w=
-15TxGsqDjhh5SYMb1K25xQbu6h3vFncgQE IBwKb3VKlwxmZAcDeI6SK3Kf9vrvIin16aOAp1BYN/AmeOxJtdb2MpvFK6xRl5b7SXjAy+QqTQP+uh0y/QvzrLg=
-````
+    1Ca3HHUpfwkhyM2BFVQTaETaoobDQB5KpK IBNyA+WjHqEOWiG+B7+iU1mrKF4HGxZQGnwv0kAkWThIbxOvHOX98w74oHpuF4pM/8ncy4a3tWBDVCk8E2GggyU=
+    19R25QpxKJs26PGYTrapurg5u2DadRCMw HyjukdO0xGPaiPL0YcQe6coDDy+SpOzCHkjoMd1JhlETRiipWU7VbjDBChb1jqKwXANjMV3rlIRmEEtzG87w/8w=
+    15TxGsqDjhh5SYMb1K25xQbu6h3vFncgQE IBwKb3VKlwxmZAcDeI6SK3Kf9vrvIin16aOAp1BYN/AmeOxJtdb2MpvFK6xRl5b7SXjAy+QqTQP+uh0y/QvzrLg=
+
+If need a list of addresses before you are given the message to be signed (when you are claiming lumens, for example),
+you can run kkpof without specifying a message. It will display a list of addresses only::
+
+    kkpof
+    1Ca3HHUpfwkhyM2BFVQTaETaoobDQB5KpK
+    19R25QpxKJs26PGYTrapurg5u2DadRCMw
+    15TxGsqDjhh5SYMb1K25xQbu6h3vFncgQE
+
 
 Entering a PIN
 --------------
@@ -55,7 +59,6 @@ When you are asked for PIN, you have to enter scrambled PIN. Following
 the numbers shown on KeepKey display, enter the their positions using the
 numeric keyboard mapping:
 
-````
 +---+---+---+
 | 7 | 8 | 9 |
 +---+---+---+
@@ -63,11 +66,9 @@ numeric keyboard mapping:
 +---+---+---+
 | 1 | 2 | 3 |
 +---+---+---+
-````
 
 For example: If your PIN is **1234** and KeepKey displays the following:
 
-````
 +---+---+---+
 | 2 | 8 | 3 |
 +---+---+---+
@@ -75,7 +76,6 @@ For example: If your PIN is **1234** and KeepKey displays the following:
 +---+---+---+
 | 7 | 9 | 1 |
 +---+---+---+
-````
 
 You will type: **3795**
 
